@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff6de"/>
+      <stop offset="0.45" stop-color="#ffecc0"/>
+      <stop offset="0.72" stop-color="#ffd98f"/>
+      <stop offset="0.86" stop-color="#f6bd6a"/>
+      <stop offset="1" stop-color="#eda95c"/>
+    </linearGradient>
+    <radialGradient id="sunGlow">
+      <stop offset="0" stop-color="#ffd98a" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffd98a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sunCore">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#ffe49b"/>
+      <stop offset="1" stop-color="#ffc766"/>
+    </radialGradient>
+    <linearGradient id="pyLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cf9b35"/>
+      <stop offset="1" stop-color="#a96f1e"/>
+    </linearGradient>
+    <linearGradient id="pyRight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4d383"/>
+      <stop offset="1" stop-color="#d9a64a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1600" height="900" fill="url(#sky)"/>
+
+  <!-- distant sparkles -->
+  <g fill="#ffd98a" opacity="0.5">
+    <path d="M240 300 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5 Z"/>
+    <path d="M620 270 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5 Z"/>
+    <path d="M1400 240 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5 Z"/>
+    <path d="M1180 190 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 Z"/>
+  </g>
+
+  <!-- sun -->
+  <circle cx="980" cy="430" r="175" fill="url(#sunGlow)"/>
+  <circle cx="980" cy="430" r="80" fill="url(#sunCore)"/>
+
+  <!-- golden sparkles around the sun -->
+  <g fill="#ffd98a">
+    <path d="M980 300 l3.5 8 8 3.5 -8 3.5 -3.5 8 -3.5 -8 -8 -3.5 8 -3.5 Z"/>
+    <path d="M900 248 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 Z" opacity="0.8"/>
+    <path d="M1080 340 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 Z" opacity="0.75"/>
+    <path d="M880 370 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5 Z" opacity="0.6"/>
+    <path d="M1120 250 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 Z" opacity="0.85"/>
+    <path d="M1010 210 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5 Z" opacity="0.7"/>
+  </g>
+
+  <!-- hieroglyph frieze -->
+  <g stroke="#b8872a" stroke-width="2" stroke-linecap="round">
+    <line x1="60" y1="101" x2="1540" y2="101" opacity="0.55"/>
+    <line x1="60" y1="113" x2="1540" y2="113" opacity="0.55"/>
+  </g>
+  <g fill="#b8872a">
+    <path d="M350 92 L355 100 L350 108 L345 100 Z" opacity="0.45"/>
+    <path d="M610 92 L615 100 L610 108 L605 100 Z" opacity="0.45"/>
+    <path d="M870 92 L875 100 L870 108 L865 100 Z" opacity="0.45"/>
+    <path d="M1130 92 L1135 100 L1130 108 L1125 100 Z" opacity="0.45"/>
+    <path d="M1390 92 L1395 100 L1390 108 L1385 100 Z" opacity="0.45"/>
+  </g>
+  <g stroke="#b8872a" stroke-width="2" stroke-linecap="round">
+    <g>
+      <circle cx="220" cy="90" r="3"/>
+      <path d="M220 93 V104 M216 98 H224"/>
+    </g>
+    <g>
+      <circle cx="480" cy="90" r="3"/>
+      <path d="M480 93 V104 M476 98 H484"/>
+    </g>
+    <g>
+      <circle cx="740" cy="90" r="3"/>
+      <path d="M740 93 V104 M736 98 H744"/>
+    </g>
+    <g>
+      <circle cx="1000" cy="90" r="3"/>
+      <path d="M1000 93 V104 M996 98 H1004"/>
+    </g>
+    <g>
+      <circle cx="1260" cy="90" r="3"/>
+      <path d="M1260 93 V104 M1256 98 H1264"/>
+    </g>
+  </g>
+
+  <!-- lotus column (far left) -->
+  <g>
+    <rect x="26" y="400" width="58" height="300" fill="#a8732a"/>
+    <g stroke="#7c4d18" stroke-width="2" opacity="0.55">
+      <line x1="40" y1="405" x2="40" y2="695"/>
+      <line x1="55" y1="405" x2="55" y2="695"/>
+      <line x1="70" y1="405" x2="70" y2="695"/>
+    </g>
+    <path d="M84 400 L70 330 Q55 300 40 330 L26 400 Z" fill="#a8732a"/>
+    <path d="M40 330 Q55 300 70 330 L84 400 L26 400 Z" fill="#8a5a1c"/>
+    <path d="M55 362 L55 400 M84 400 L55 362 L26 400" stroke="#f6d891" stroke-width="2" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- pyramid 4 (far left, small) -->
+  <path d="M170 540 L40 650 L300 650 Z" fill="url(#pyLeft)"/>
+  <path d="M170 540 L170 650 L300 650 Z" fill="url(#pyRight)"/>
+  <line x1="170" y1="540" x2="300" y2="650" stroke="#f6e7b8" stroke-width="2" opacity="0.6"/>
+
+  <!-- pyramid 1 (centre-left) -->
+  <path d="M470 330 L250 690 L690 690 Z" fill="url(#pyLeft)"/>
+  <path d="M470 330 L470 690 L690 690 Z" fill="url(#pyRight)"/>
+  <line x1="470" y1="330" x2="690" y2="690" stroke="#f6e7b8" stroke-width="2" opacity="0.6"/>
+  <line x1="470" y1="330" x2="470" y2="690" stroke="#8a5a16" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- pyramid 2 (tallest, centre-right, behind sun) -->
+  <path d="M820 225 L520 715 L1120 715 Z" fill="url(#pyLeft)"/>
+  <path d="M820 225 L820 715 L1120 715 Z" fill="url(#pyRight)"/>
+  <line x1="820" y1="225" x2="1120" y2="715" stroke="#f6e7b8" stroke-width="2.5" opacity="0.6"/>
+
+  <!-- pyramid 3 (right) -->
+  <path d="M1290 320 L1090 690 L1490 690 Z" fill="url(#pyLeft)"/>
+  <path d="M1290 320 L1290 690 L1490 690 Z" fill="url(#pyRight)"/>
+  <line x1="1290" y1="320" x2="1490" y2="690" stroke="#f6e7b8" stroke-width="2" opacity="0.6"/>
+
+  <!-- sphinx -->
+  <g fill="#7c4d18" stroke="#f6d891" stroke-width="2" stroke-opacity="0.5" stroke-linejoin="round">
+    <path d="M1240 790 Q1240 748 1198 748 L1132 748 Q1088 748 1080 776 L1080 790 Z"/>
+    <path d="M1080 772 L1046 772 L1046 790 L1080 790"/>
+    <path d="M1132 748 L1132 706 Q1132 696 1144 691 L1166 691 Q1178 696 1178 706 L1178 748 Z"/>
+    <path d="M1144 691 L1149 660 L1162 660 L1167 691 Z"/>
+  </g>
+
+  <!-- desert dunes -->
+  <path d="M0 720 Q220 690 470 716 T950 706 T1390 720 T1600 698 L1600 900 L0 900 Z" fill="#f6d491"/>
+  <path d="M0 775 Q270 748 570 770 T1190 762 T1600 750 L1600 900 L0 900 Z" fill="#eec06f"/>
+  <path d="M0 840 Q320 812 660 838 T1320 828 T1600 838 L1600 900 L0 900 Z" fill="#e0ab52"/>
+
+  <!-- palm tree (far right) -->
+  <g stroke="#6f4817" stroke-width="7" stroke-linecap="round" fill="none">
+    <path d="M1508 720 Q1522 560 1560 448"/>
+  </g>
+  <g stroke="#6f4817" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M1560 448 Q1518 430 1492 458"/>
+    <path d="M1560 448 Q1508 462 1500 486"/>
+    <path d="M1560 448 Q1510 452 1494 470"/>
+    <path d="M1560 448 Q1604 432 1626 458"/>
+    <path d="M1560 448 Q1612 462 1618 486"/>
+    <path d="M1560 448 Q1560 408 1542 394"/>
+    <path d="M1560 448 Q1574 408 1590 394"/>
+  </g>
+</svg>

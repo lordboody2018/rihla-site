@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8e9b8"/>
+      <stop offset="0.55" stop-color="#f3dc93"/>
+      <stop offset="1" stop-color="#ecc96a"/>
+    </linearGradient>
+    <linearGradient id="glyph" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9a7b1c"/>
+      <stop offset="1" stop-color="#78590f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- warm sand/gold ground -->
+  <rect width="400" height="400" fill="url(#sand)"/>
+
+  <!-- layered desert dunes at the tile foot (tileable) -->
+  <path d="M0 344 Q70 318 150 340 T310 330 T400 344 V400 H0 Z" fill="#dba83f" opacity="0.4"/>
+  <path d="M0 370 Q90 352 180 366 T330 356 T400 370 V400 H0 Z" fill="#cf9c31" opacity="0.45"/>
+
+  <!-- gilded royal symbols -->
+  <g fill="#a8842a" fill-opacity="0.10" stroke="url(#glyph)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Winged sun disk (top centre) -->
+    <g transform="translate(200 112)">
+      <circle cx="0" cy="0" r="6.5"/>
+      <path d="M-4 -3 Q-15 -8 -24 -4 Q-13 -1 -6 0 Z"/>
+      <path d="M-4 3 Q-15 8 -24 4 Q-13 1 -6 0 Z"/>
+      <path d="M4 -3 Q15 -8 24 -4 Q13 -1 6 0 Z"/>
+      <path d="M4 3 Q15 8 24 4 Q13 1 6 0 Z"/>
+    </g>
+
+    <!-- Royal cartouche with ankh (centre) -->
+    <g transform="translate(186 178)">
+      <ellipse cx="14" cy="9" rx="12.5" ry="7"/>
+      <path d="M7 15.5 H21 M9.5 17.5 H18.5"/>
+      <circle cx="14" cy="4" r="2.6"/>
+      <path d="M14 6.6 V14 M10.5 10.5 H17.5"/>
+    </g>
+
+    <!-- Eye of Horus -->
+    <g transform="translate(52 52)">
+      <path d="M3 5 Q12 1 21 5"/>
+      <path d="M3 8 Q12 13 21 8 Q12 14.5 3 8"/>
+      <circle cx="12" cy="8" r="2"/>
+      <path d="M3 8 Q7 12 9.5 15.5 Q11.5 17.5 14 15.5"/>
+      <path d="M14 15.5 Q17 17.5 16 19.5 Q15 20.5 13.5 19.5"/>
+    </g>
+
+    <!-- Lotus -->
+    <g transform="translate(322 50)">
+      <path d="M8 18 Q4.5 11 8 6 Q11.5 11 8 18"/>
+      <path d="M8 16 Q3 10 4.5 5.5 Q7 8 8 16"/>
+      <path d="M8 16 Q13 10 11.5 5.5 Q9 8 8 16"/>
+    </g>
+
+    <!-- Scarab -->
+    <g transform="translate(58 318)">
+      <path d="M10 9 Q14 10 15 14 Q15 18 10 20 Q5 18 5 14 Q6 10 10 9 Z"/>
+      <path d="M10 10 V19"/>
+      <path d="M7 7 Q10 5 13 7 Q10 4 7 7 Z"/>
+      <path d="M6 10 L3 12 M6 13 L4 15 M6 16 L5 18"/>
+      <path d="M14 10 L17 12 M14 13 L16 15 M14 16 L15 18"/>
+    </g>
+
+    <!-- Shen ring (eternity) -->
+    <g transform="translate(322 318)">
+      <circle cx="8" cy="8" r="6"/>
+      <path d="M8 14 V18 M5 18 H11"/>
+    </g>
+
+    <!-- small ankh (top) -->
+    <g transform="translate(192 40)">
+      <circle cx="8" cy="3" r="2.6"/>
+      <path d="M8 5.6 V15 M4.5 10.5 H11.5"/>
+    </g>
+
+    <!-- small lotus (bottom) -->
+    <g transform="translate(192 348)">
+      <path d="M8 15 Q5 9 8 5 Q11 9 8 15"/>
+      <path d="M8 13.5 Q4 8.5 5 5 Q7 7.5 8 13.5"/>
+      <path d="M8 13.5 Q12 8.5 11 5 Q9 7.5 8 13.5"/>
+    </g>
+
+  </g>
+</svg>

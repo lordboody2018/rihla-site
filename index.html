@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a3d62">
+  <meta name="description" content="Rihla - Sharm El Sheikh, Hurghada, Cairo | رحلة - شرم الشيخ، الغردقة، القاهرة">
+  <title>Rihla | رحلة</title>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Rihla">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="canonical" href="https://lordboody2018.github.io/rihla-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rihla">
+  <meta property="og:title" content="Rihla | رحلة — رحلات مصر">
+  <meta property="og:description" content="اكتشف أجمل رحلات مصر — من شرم الشيخ والغردقة إلى القاهرة والأقصر. احجز رحلتك الآن!">
+  <meta property="og:image" content="icons/icon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Rihla | رحلة — رحلات مصر">
+  <meta name="twitter:description" content="اكتشف أجمل رحلات مصر — من شرم الشيخ والغردقة إلى القاهرة والأقصر. احجز رحلتك الآن!">
+  <meta name="twitter:image" content="icons/icon-512.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Rihla",
+    "alternateName": "رحلة",
+    "description": "أفضل رحلات مصر — شرم الشيخ، الغردقة، القاهرة، الأقصر وأسوان.",
+    "telephone": "+201002502353",
+    "email": "lordboody2018@gmail.com",
+    "priceRange": "$"
+  }
+  </script>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛕</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="toast-root"></div>
+
+  <!-- Pharaonic royal-symbol background pattern -->
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <!-- Top announcement bar -->
+  <div class="announce-bar">
+    <span id="announce-text">✨ 25% OFF on all Red Sea tours this summer</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#/" class="brand" id="brand">
+        <span class="brand-logo">🛕</span>
+        <span class="brand-name" data-i18n="brandName">رحلة</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#/" data-i18n="navHome">الرئيسية</a>
+        <a href="#/sharm-el-sheikh" data-i18n="navSharm">شرم الشيخ</a>
+        <a href="#/hurghada" data-i18n="navHurghada">الغردقة</a>
+        <a href="#/cairo" data-i18n="navCairo">القاهرة</a>
+        <a href="#/cities" data-i18n="navCities">كل المدن</a>
+        <a href="#/categories" data-i18n="navCategories">الفئات</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher" id="lang-switcher">
+          <button class="lang-btn" id="lang-btn" data-i18n="language">العربية</button>
+          <div class="lang-menu" id="lang-menu">
+            <button data-lang="ar">العربية</button>
+            <button data-lang="en">English</button>
+            <button data-lang="de">Deutsch</button>
+            <button data-lang="fr">Français</button>
+            <button data-lang="ru">Русский</button>
+          </div>
+        </div>
+        <a href="#/bookings" class="icon-btn" title="My bookings" id="bookings-link">🧾</a>
+        <a href="#/admin" class="icon-btn" title="Admin" id="admin-link">⚙️</a>
+        <button class="icon-btn" id="install-btn" style="display:none;" title="Install app">📲</button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav drawer -->
+  <div class="nav-drawer" id="nav-drawer">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <span class="brand-logo">🛕</span>
+        <button class="drawer-close" id="drawer-close">✕</button>
+      </div>
+      <nav>
+        <a href="#/" data-i18n="navHome">الرئيسية</a>
+        <a href="#/sharm-el-sheikh" data-i18n="navSharm">شرم الشيخ</a>
+        <a href="#/hurghada" data-i18n="navHurghada">الغردقة</a>
+        <a href="#/cairo" data-i18n="navCairo">القاهرة</a>
+        <a href="#/cities" data-i18n="navCities">كل المدن</a>
+        <a href="#/categories" data-i18n="navCategories">الفئات</a>
+        <a href="#/bookings" data-i18n="navMyBookings">حجوزاتي</a>
+        <a href="#/admin" data-i18n="navAdmin">لوحة التحكم</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Golden floating particles -->
+  <div class="dust" id="dust" aria-hidden="true"></div>
+
+  <!-- Main content -->
+  <main id="app"></main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 data-i18n="brandName">رحلة</h4>
+        <p data-i18n="footerAbout">اكتشف أجمل رحلات مصر — من شرم الشيخ والغردقة إلى القاهرة والأقصر.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footerCities">المدن</h4>
+        <a href="#/sharm-el-sheikh" data-i18n="navSharm">شرم الشيخ</a>
+        <a href="#/hurghada" data-i18n="navHurghada">الغردقة</a>
+        <a href="#/cairo" data-i18n="navCairo">القاهرة</a>
+        <a href="#/luxor" data-i18n="navLuxor">الأقصر</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footerHelp">المساعدة</h4>
+        <a href="#/bookings" data-i18n="navMyBookings">حجوزاتي</a>
+        <a href="#/admin" data-i18n="navAdmin">لوحة التحكم</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footerContact">تواصل معنا</h4>
+        <a href="mailto:lordboody2018@gmail.com">📧 lordboody2018@gmail.com</a>
+        <a href="tel:+201002502353">📞 +20 100 250 2353</a>
+        <a href="https://wa.me/201002502353" target="_blank" rel="noopener">💬 واتساب</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Rihla — <span data-i18n="footerRights">جميع الحقوق محفوظة</span></p>
+    </div>
+  </footer>
+
+  <!-- Floating booking button -->
+  <button class="fab" id="fab" style="display:none;">🛒</button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('service-worker.js').catch(function(){});
+      });
+    }
+  </script>
+</body>
+</html>

@@ -827,7 +827,9 @@
     });
     langMenu.querySelectorAll('button').forEach(function (b) {
       b.addEventListener('click', function () {
-        I18N.setLang(b.getAttribute('data-lang'));
+        var pick = b.getAttribute('data-lang');
+        if (pick === 'auto') I18N.setAuto();
+        else I18N.setLang(pick, true);
         langMenu.classList.remove('open');
         route();
       });

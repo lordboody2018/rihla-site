@@ -1,5 +1,5 @@
 /* Rihla — Service Worker */
-var CACHE = 'Rihla-v18';
+var CACHE = 'Rihla-v19';
 var ASSETS = [
   './',
   './index.html',

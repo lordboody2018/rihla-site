@@ -18,6 +18,7 @@ var I18N = (function () {
     navMyBookings: { ar: 'حجوزاتي', en: 'My Bookings', de: 'Meine Buchungen', fr: 'Mes réservations', ru: 'Мои бронирования' },
     navAdmin: { ar: 'لوحة التحكم', en: 'Admin Panel', de: 'Admin-Panel', fr: 'Panneau admin', ru: 'Панель администратора' },
     language: { ar: 'العربية', en: 'English', de: 'Deutsch', fr: 'Français', ru: 'Русский' },
+    langAuto: { ar: 'تلقائي (لغة الجهاز)', en: 'Auto (device language)', de: 'Automatisch (Gerätesprache)', fr: 'Auto (langue de l\'appareil)', ru: 'Авто (язык устройства)' },
 
     /* ---------------- Hero / Home ---------------- */
     heroTitle: { ar: 'أفضل الرحلات في شرم الشيخ والغردقة والقاهرة', en: 'The best tours in Sharm El Sheikh, Hurghada & Cairo', de: 'Die besten Touren in Scharm El Scheich, Hurghada & Kairo', fr: 'Les meilleures excursions à Charm el-Cheikh, Hurghada & Le Caire', ru: 'Лучшие экскурсии в Шарм-эль-Шейхе, Хургаде и Каире' },
@@ -252,9 +253,27 @@ var I18N = (function () {
     allDestinations: { ar: 'كل الوجهات', en: 'All destinations', de: 'Alle Ziele', fr: 'Toutes les destinations', ru: 'Все направления' }
   };
 
-  var lang = 'ar';
-  try { lang = localStorage.getItem('et_lang') || 'ar'; } catch (e) {}
-  if (SUPPORTED.indexOf(lang) === -1) lang = 'ar';
+  var manual = false;
+  var saved = null;
+  try {
+    saved = localStorage.getItem('et_lang');
+    manual = localStorage.getItem('et_lang_manual') === '1';
+  } catch (e) {}
+
+  function detectDeviceLang() {
+    if (window.__RIHLA_LANG && SUPPORTED.indexOf(window.__RIHLA_LANG) !== -1) return window.__RIHLA_LANG;
+    var prefs = [];
+    try {
+      prefs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+    } catch (e) { prefs = []; }
+    for (var i = 0; i < prefs.length; i++) {
+      var code = String(prefs[i] || '').toLowerCase().split(/[-_]/)[0];
+      if (SUPPORTED.indexOf(code) !== -1) return code;
+    }
+    return 'en';
+  }
+
+  var lang = (manual && saved && SUPPORTED.indexOf(saved) !== -1) ? saved : detectDeviceLang();
 
   function t(key) {
     var entry = T[key];
@@ -262,10 +281,13 @@ var I18N = (function () {
     return entry[lang] || entry.en || key;
   }
 
-  function setLang(newLang) {
+  function setLang(newLang, markManual) {
     if (SUPPORTED.indexOf(newLang) === -1) return;
     lang = newLang;
-    try { localStorage.setItem('et_lang', lang); } catch (e) {}
+    try {
+      localStorage.setItem('et_lang', lang);
+      if (markManual) { localStorage.setItem('et_lang_manual', '1'); manual = true; }
+    } catch (e) {}
     document.documentElement.lang = lang;
     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
     document.title = t('brandName') + ' | ' + t('tagline');
@@ -279,13 +301,22 @@ var I18N = (function () {
     var langBtn = document.getElementById('lang-btn');
     if (langBtn) langBtn.textContent = t('language');
     document.querySelectorAll('.lang-menu button').forEach(function (b) {
-      if (b.getAttribute('data-lang') === lang) b.classList.add('active');
+      var v = b.getAttribute('data-lang');
+      if (v === (manual ? lang : 'auto')) b.classList.add('active');
       else b.classList.remove('active');
     });
+  }
+
+  function setAuto() {
+    try { localStorage.removeItem('et_lang'); localStorage.removeItem('et_lang_manual'); } catch (e) {}
+    manual = false;
+    setLang(detectDeviceLang());
   }
 
   function getLang() { return lang; }
   function isRTL() { return lang === 'ar'; }
 
-  return { t: t, setLang: setLang, getLang: getLang, isRTL: isRTL, SUPPORTED: SUPPORTED };
+  setLang(lang);
+
+  return { t: t, setLang: setLang, setAuto: setAuto, getLang: getLang, isRTL: isRTL, SUPPORTED: SUPPORTED };
 })();
